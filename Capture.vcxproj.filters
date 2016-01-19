@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\wav_io.h" />
+    <ClInclude Include="src\sound.h" />
+    <ClInclude Include="src\random.h" />
+    <ClInclude Include="src\Auxiliary\delay.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Auxiliary\nested_allpass.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Auxiliary\allpass.h">
+      <Filter>Auxiliary</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Auxiliary">
+      <UniqueIdentifier>{7f8a3378-5710-4810-9d4a-cc3cbf8261f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
