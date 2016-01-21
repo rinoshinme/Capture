@@ -71,15 +71,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\filter\transform.cpp" />
+    <ClCompile Include="src\sound\simple_wav.cpp" />
     <ClCompile Include="src\test.cpp" />
+    <ClCompile Include="src\testDraw.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Auxiliary\allpass.h" />
-    <ClInclude Include="src\Auxiliary\delay.h" />
-    <ClInclude Include="src\Auxiliary\nested_allpass.h" />
-    <ClInclude Include="src\random.h" />
+    <ClInclude Include="src\auxiliary\allpass.h" />
+    <ClInclude Include="src\auxiliary\delay.h" />
+    <ClInclude Include="src\auxiliary\gardner_reverb.h" />
+    <ClInclude Include="src\auxiliary\nested_allpass.h" />
+    <ClInclude Include="src\filter\firfilter.h" />
+    <ClInclude Include="src\filter\iirfilter.h" />
+    <ClInclude Include="src\filter\transform.h" />
     <ClInclude Include="src\sound.h" />
-    <ClInclude Include="src\wav_io.h" />
+    <ClInclude Include="src\sound\simple_wav.h" />
+    <ClInclude Include="src\sound\sound_obj.h" />
+    <ClInclude Include="src\sound\wav_header.h" />
+    <ClInclude Include="src\sound\wav_io.h" />
+    <ClInclude Include="src\utils\helper.h" />
+    <ClInclude Include="src\utils\random.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

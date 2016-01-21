@@ -13,7 +13,7 @@ namespace Capture
 
 	public:
 		/* constructors and destructor */
-		Delay(int d)
+		Delay(int d=0)
 		{
 			if (d == 0)
 			{
@@ -28,10 +28,43 @@ namespace Capture
 			}
 		}
 
+		Delay(const Delay& copy)
+		{
+			pos = copy.pos;
+			delay = copy.delay;
+			temp = copy.temp;
+			if (!copy.delayBuffer)
+				delayBuffer = NULL;
+			else
+			{
+				delayBuffer = new double[delay + 1];
+				Reset();
+			}
+		}
+
 		~Delay()
 		{
 			if (delayBuffer)
 				delete[] delayBuffer;
+		}
+
+		Delay& operator=(const Delay& rhs)
+		{
+			if (this == &rhs)
+				return *this;
+			pos = rhs.pos;
+			delay = rhs.delay;
+			temp = rhs.temp;
+			if (delayBuffer)
+				delete[] delayBuffer;
+			if (!rhs.delayBuffer)
+				delayBuffer = NULL;
+			else
+			{
+				delayBuffer = new double[delay + 1];
+				memcpy(delayBuffer, rhs.delayBuffer, sizeof(double) * (delay + 1));
+			}
+			return *this;
 		}
 
 		double DoProcess(double input)

@@ -17,6 +17,10 @@ namespace Capture
 
 	public:
 		/* constructors and destructor */
+		NestedAllPass()
+			:gain(1.0), temp(0.0), allPass(), delay()
+		{}
+
 		NestedAllPass(double g1, double g2, int d1, int d2)
 			:gain(g2), temp(0.0), allPass(g1, d1), delay(d2)
 		{}
@@ -28,7 +32,6 @@ namespace Capture
 			return temp;
 		}
 	};
-
 
 	class DoubleNestedAllPass
 	{
@@ -43,6 +46,10 @@ namespace Capture
 
 	public:
 		/* constructors and destructor */
+		DoubleNestedAllPass()
+			:gain(1.0), temp(0.0), allPass1(), allPass2(), delay()
+		{}
+
 		DoubleNestedAllPass(double g1, double g2, double g3, int d1, int d2, int d3)
 			:gain(g3), temp(0.0), allPass1(g1, d1), allPass2(g2, d2), delay(d3)
 		{}

@@ -4,31 +4,15 @@
 #include <fstream>
 #include <string>
 #include <cstring>
-#include "sound.h"
+#include "wav_header.h"
+#include "sound_obj.h"
 
 namespace Capture
 {
-	struct WAVHeader
-	{
-		char RIFF[4];
-		long chunkSize;
-		char WAVE[4];
-		char FMT[4];
-		long subChunk1Size;
-		short audioFormat;
-		short numChannels;
-		long sampleRate;
-		long byteRate;
-		short blockAlign;
-		short bitsPerSample;
-		char DATA[4];
-		long subChunk2Size;
-	};
-
 	class WAVReader
 	{
 	private:
-		WAVHeader header;
+		WavHeader header;
 		std::ifstream fs;
 		std::string filename;
 
@@ -48,10 +32,10 @@ namespace Capture
 		}
 
 		// read into Sound object
-		Sound Read()
+		SoundObj Read()
 		{
-			fs.read((char*)&header, sizeof(WAVHeader));
-			Sound s(header.sampleRate, header.numChannels, header.bitsPerSample, header.subChunk2Size);
+			fs.read((char*)&header, sizeof(WavHeader));
+			SoundObj s(header.sampleRate, header.numChannels, header.bitsPerSample, header.subChunk2Size);
 			char* data = s.GetPtrData();
 			fs.read(data, header.subChunk2Size);
 
@@ -73,7 +57,7 @@ namespace Capture
 			return header.sampleRate;
 		}
 
-		WAVHeader GetHeader() const
+		WavHeader GetHeader() const
 		{
 			return header;
 		}
@@ -82,14 +66,14 @@ namespace Capture
 	class WAVWriter
 	{
 	private:
-		WAVHeader header;
+		WavHeader header;
 		std::ofstream fs;
 		std::string filename;
 		char* data;
 
 	public:
 		/* constructors and destructor */
-		WAVWriter(const std::string& fn, const Sound& s)
+		WAVWriter(const std::string& fn, const SoundObj& s)
 			:filename(fn)
 		{
 			fs.open(filename, std::ios::out | std::ios::binary);
@@ -99,13 +83,13 @@ namespace Capture
 			long sampleRate = s.GetSampleRate();
 			short bitsPerSample = s.GetBitsPerSample();
 
-			strcpy(header.RIFF, "RIFF");
-			//strcpy_s(header.RIFF, "RIFF");
+			//strcpy(header.RIFF, "RIFF");
+			strcpy_s(header.RIFF, "RIFF");
 			header.chunkSize = dataSize + 36;
-			strcpy(header.WAVE, "WAVE");
-			//strcpy_s(header.WAVE, "WAVE");
-			strcpy(header.FMT, "fmt ");
-			//strcpy_s(header.FMT, "FMT ");
+			//strcpy(header.WAVE, "WAVE");
+			strcpy_s(header.WAVE, "WAVE");
+			//strcpy(header.FMT, "fmt ");
+			strcpy_s(header.FMT, "FMT ");
 			header.subChunk1Size = 16;
 			header.audioFormat = 1;
 			header.numChannels = numChannels;
@@ -113,8 +97,8 @@ namespace Capture
 			header.byteRate = bitsPerSample * numChannels * sampleRate / 8;
 			header.blockAlign = (short)numChannels * bitsPerSample / 8;
 			header.bitsPerSample = bitsPerSample;
-			strcpy(header.DATA, "data");
-			//strcpy_s(header.DATA, "DATA");
+			//strcpy(header.DATA, "data");
+			strcpy_s(header.DATA, "DATA");
 			header.subChunk2Size = dataSize;
 
 			data = s.GetPtrData();
@@ -128,7 +112,7 @@ namespace Capture
 		void Write()
 		{
 			// write header
-			fs.write((char*)&header, sizeof(WAVHeader));
+			fs.write((char*)&header, sizeof(WavHeader));
 
 			// write data
 			fs.write(data, header.subChunk2Size);

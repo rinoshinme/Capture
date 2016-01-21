@@ -26,6 +26,43 @@ namespace Capture
 			Reset();
 		}
 
+		AllPass()
+			:gain(1.0), delay(0)
+		{
+			inputBuffer = new double[0];
+			outputBuffer = new double[0];
+		}
+
+		AllPass(const AllPass& copy)
+		{
+			gain = copy.gain;
+			delay = copy.delay;
+			pos = copy.pos;
+			inputTemp = copy.inputTemp;
+			outputTemp = copy.outputTemp;
+			inputBuffer = new double[delay + 1];
+			outputBuffer = new double[delay + 1];
+			memcpy(inputBuffer, copy.inputBuffer, sizeof(double) * (delay + 1));
+			memcpy(outputBuffer, copy.outputBuffer, sizeof(double) * (delay + 1));
+		}
+
+		AllPass& operator=(const AllPass& rhs)
+		{
+			if (this == &rhs)
+				return *this;
+			gain = rhs.gain;
+			delay = rhs.delay;
+			pos = rhs.pos;
+			inputTemp = rhs.inputTemp;
+			outputTemp = rhs.outputTemp;
+			delete[] inputBuffer;
+			inputBuffer = new double[delay + 1];
+			memcpy(inputBuffer, rhs.inputBuffer, sizeof(double) * (delay + 1));
+			delete[] outputBuffer;
+			outputBuffer = new double[delay + 1];
+			memcpy(outputBuffer, rhs.outputBuffer, sizeof(delay + 1));
+		}
+
 		~AllPass()
 		{
 			delete[] inputBuffer;
