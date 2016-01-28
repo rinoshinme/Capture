@@ -1,7 +1,8 @@
 #ifndef _FIR_FILTER
 #define _FIR_FILTER
 
-#include "../utils/helper.h"
+#include "../functions.h"
+#include <string.h>
 
 namespace Capture
 {
@@ -34,7 +35,6 @@ namespace Capture
 					a[i] = coef[i];
 				else
 					a[i] = 0.0;
-			
 			}
 			pos = 0;
 		}
@@ -87,7 +87,5 @@ namespace Capture
 		}
 	};
 }
-
-
 
 #endif

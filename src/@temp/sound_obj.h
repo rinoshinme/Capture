@@ -200,7 +200,6 @@ namespace Capture
 			GetAllSamples8Bit(ch, result.GetPtrData());
 			return result;
 		}
-
 	};
 }
 

@@ -1,6 +1,8 @@
 #ifndef _ALL_PASS_H
 #define _ALL_PASS_H
 
+#include <cstring>
+
 namespace Capture
 {
 	class AllPass
@@ -97,6 +99,4 @@ namespace Capture
 	};
 }
 
-
 #endif
-

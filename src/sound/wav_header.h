@@ -21,7 +21,5 @@ namespace Capture
 	};
 }
 
-
-
 #endif
 

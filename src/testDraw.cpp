@@ -4,7 +4,7 @@
  */
 #include <GL\glut.h>
 #include <string>
-#include "sound.h"
+#include "sound\simple_wav.h"
 
 using namespace Capture;
 
@@ -30,12 +30,10 @@ void display()
 {
 	double* data = s.GetPtrData();
 	glColor3f(0.0, 1.0, 0.0);
+
 	glBegin(GL_LINE_STRIP);
 	for (int i = 0; i < LEN; ++i)
-	{
-		//glVertex2f(i * (800.0 / LEN), data[i + 100000] * 300 + 300);
-		glVertex2f(i * (width / LEN), data[i + 100000] * (height/2) + height/2);
-	}
+		glVertex2f(i * (width / LEN), data[i + 300000] * (height/2) + height/2);
 	glEnd();
 
 	glFlush();

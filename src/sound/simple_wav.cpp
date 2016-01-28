@@ -1,17 +1,15 @@
 #include "simple_wav.h"
-#include "wav_io.h"
 #include <fstream>
+#include <iostream>
 
 namespace Capture
 {
 	SimpleSound WavRead(const std::string& filename, int ch)
 	{
-
 		std::ifstream fs;
-		fs.open(filename.c_str(), std::ios::binary | std::ios::in);
-
-		// read all
 		WavHeader header;
+		fs.open(filename.c_str(), std::ios::binary | std::ios::in);
+		// read all
 		fs.read((char*)&header, sizeof(WavHeader));
 		char* wavData = new char[header.subChunk2Size];
 		fs.read(wavData, header.subChunk2Size);
@@ -23,9 +21,8 @@ namespace Capture
 		short bitsPerSample = header.bitsPerSample;
 
 		long length = size * 8 / (numChannels * bitsPerSample);
-		// throw exception if trying to get channel data not exist
 		if (numChannels == 1 && ch == 1)
-			throw (0);
+			ch = 0;
 		double* soundData = new double[length];
 
 		if (bitsPerSample == 8)
@@ -84,10 +81,6 @@ namespace Capture
 		header.DATA[1] = 'a';
 		header.DATA[2] = 't';
 		header.DATA[3] = 'a';
-		//sprintf(header.RIFF, "RIFF");
-		//sprintf(header.WAVE, "WAVE");
-		//sprintf(header.FMT, "fmt ");
-		//sprintf(header.DATA, "data");
 		header.chunkSize = size * bytesPerSample + 36;
 		header.subChunk1Size = 16;
 		header.audioFormat = 1;
@@ -120,9 +113,16 @@ namespace Capture
 
 		// write
 		std::ofstream fs;
-		fs.open(filename.c_str(), std::ios::out | std::ios::binary);
-		fs.write((char*)&header, sizeof(WavHeader));
-		fs.write(wavData, size * bytesPerSample);
+		try
+		{
+			fs.open(filename.c_str(), std::ios::out | std::ios::binary);
+			fs.write((char*)&header, sizeof(WavHeader));
+			fs.write(wavData, size * bytesPerSample);
+		}
+		catch (std::runtime_error)
+		{
+			std::cout << "write error" << std::endl;
+		}
 		fs.close();
 		delete[] wavData;
 	}

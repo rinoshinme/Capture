@@ -61,12 +61,7 @@ namespace Capture
 			temp = delay.DoProcess(tempAllPass);
 			return temp;
 		}
-
 	};
 }
 
-
-
-
 #endif
-

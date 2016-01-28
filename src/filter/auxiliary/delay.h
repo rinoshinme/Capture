@@ -1,6 +1,8 @@
 #ifndef _DELAY_H
 #define _DELAY_H
 
+#include <cstring>
+
 namespace Capture
 {
 	class Delay
@@ -97,4 +99,3 @@ namespace Capture
 }
 
 #endif
-

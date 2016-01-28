@@ -16,20 +16,19 @@ namespace Capture
 
 	public:
 		SimpleSound()
-			:sampleRate(0), size(0), data(NULL)
-		{}
-
-		SimpleSound(long sr, long sz)
-			:sampleRate(sr), size(sz)
+			:sampleRate(0), size(0)
 		{
-			data = new double[size];
+			data = new double[0]; // dummy data
 		}
 
-		SimpleSound(long sr, long sz, double* d)
+		SimpleSound(long sr, long sz, double* d=NULL)
 			:sampleRate(sr), size(sz)
 		{
 			data = new double[size];
-			memcpy(data, d, sizeof(double) * size);
+			if (d)
+				memcpy(data, d, sizeof(double) * size);
+			else
+				memset(data, 0, sizeof(double) * size);
 		}
 
 		SimpleSound(const SimpleSound& copy)
@@ -83,16 +82,11 @@ namespace Capture
 		{
 			return sampleRate;
 		}
-
 	};
-
-	// simple interface to read and write wav files
 
 	SimpleSound WavRead(const std::string& filename, int ch);
 
 	void WavWrite(const std::string& filename, const SimpleSound& sound, short bitsPerSample);
 }
 
-
 #endif
-

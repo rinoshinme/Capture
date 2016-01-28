@@ -1,69 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="src\test.cpp" />
     <ClCompile Include="src\sound\simple_wav.cpp">
       <Filter>sound</Filter>
     </ClCompile>
-    <ClCompile Include="src\filter\transform.cpp">
-      <Filter>filter</Filter>
-    </ClCompile>
     <ClCompile Include="src\testDraw.cpp" />
+    <ClCompile Include="src\source\generator\WhiteNoiseGenerator.cpp">
+      <Filter>source\generator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\source\generator\SineGenerator.cpp">
+      <Filter>source\generator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\source\generator\SquareGenerator.cpp">
+      <Filter>source\generator</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\auxiliary\allpass.h">
-      <Filter>auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\auxiliary\delay.h">
-      <Filter>auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\auxiliary\gardner_reverb.h">
-      <Filter>auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\auxiliary\nested_allpass.h">
-      <Filter>auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\utils\random.h">
-      <Filter>utils</Filter>
-    </ClInclude>
     <ClInclude Include="src\sound\simple_wav.h">
-      <Filter>sound</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sound\wav_io.h">
       <Filter>sound</Filter>
     </ClInclude>
     <ClInclude Include="src\sound\wav_header.h">
       <Filter>sound</Filter>
     </ClInclude>
-    <ClInclude Include="src\sound\sound_obj.h">
-      <Filter>sound</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sound.h" />
     <ClInclude Include="src\filter\firfilter.h">
       <Filter>filter</Filter>
-    </ClInclude>
-    <ClInclude Include="src\utils\helper.h">
-      <Filter>utils</Filter>
     </ClInclude>
     <ClInclude Include="src\filter\iirfilter.h">
       <Filter>filter</Filter>
     </ClInclude>
-    <ClInclude Include="src\filter\transform.h">
-      <Filter>filter</Filter>
+    <ClInclude Include="src\functions.h" />
+    <ClInclude Include="src\filter\auxiliary\allpass.h">
+      <Filter>filter\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter\auxiliary\delay.h">
+      <Filter>filter\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter\auxiliary\gardner_reverb.h">
+      <Filter>filter\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter\auxiliary\nested_allpass.h">
+      <Filter>filter\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\generator\Generator.h">
+      <Filter>source\generator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\generator\WhiteNoiseGenerator.h">
+      <Filter>source\generator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\generator\SineGenerator.h">
+      <Filter>source\generator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\generator\SquareGenerator.h">
+      <Filter>source\generator</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="auxiliary">
-      <UniqueIdentifier>{94b09f69-2065-42a3-815e-1c837186c38b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="sound">
       <UniqueIdentifier>{e350d121-61ae-43c1-b283-e61ab4e22877}</UniqueIdentifier>
     </Filter>
-    <Filter Include="utils">
-      <UniqueIdentifier>{989e0558-72cb-4cff-ad95-8dc2d0a3d2f4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="filter">
       <UniqueIdentifier>{a2177cd3-c680-4b39-b06c-dcff278544ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="filter\auxiliary">
+      <UniqueIdentifier>{e21e0b32-e431-44ef-a9b0-7c4d56198881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{013ec4ab-57f0-42e7-93ed-ad3f9f582579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\generator">
+      <UniqueIdentifier>{4fc9fa74-1281-426c-96e1-d6ee2e541fa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\window">
+      <UniqueIdentifier>{c38e94be-08ef-4dfa-be35-2c46c75b6829}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

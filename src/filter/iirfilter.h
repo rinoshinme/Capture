@@ -1,7 +1,8 @@
 #ifndef _IIR_FILTER_H
 #define _IIR_FILTER_H
 
-#include "../utils/helper.h"
+#include "../functions.h"
+#include <string.h>
 
 namespace Capture
 {
@@ -119,11 +120,7 @@ namespace Capture
 			pos_b = (pos_b + 1)%size_b;
 			return v;
 		}
-
 	};
 }
 
-
-
 #endif
-
