@@ -7,6 +7,7 @@ namespace Capture
 {
 	class SineGenerator: public Generator
 	{
+	public:
 		SineGenerator()
 			:Generator()
 		{}

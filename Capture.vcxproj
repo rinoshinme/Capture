@@ -76,7 +76,10 @@
     <ClCompile Include="src\source\generator\SquareGenerator.cpp" />
     <ClCompile Include="src\source\generator\WhiteNoiseGenerator.cpp" />
     <ClCompile Include="src\testDraw.cpp" />
-    <ClCompile Include="testWindow.cpp" />
+    <ClCompile Include="src\testTransform.cpp" />
+    <ClCompile Include="src\testWindow.cpp" />
+    <ClCompile Include="src\transform\fft4g.c" />
+    <ClCompile Include="src\transform\OouraFFT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\filter\auxiliary\allpass.h" />
@@ -97,6 +100,8 @@
     <ClInclude Include="src\source\window\HannWindow.h" />
     <ClInclude Include="src\source\window\RectangularWindow.h" />
     <ClInclude Include="src\source\window\window.h" />
+    <ClInclude Include="src\transform\OouraFFT.h" />
+    <ClInclude Include="src\transform\transform_types.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

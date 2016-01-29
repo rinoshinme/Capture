@@ -7,6 +7,7 @@ namespace Capture
 {
 	class WhiteNoiseGenerator: public Generator
 	{
+	public:
 		WhiteNoiseGenerator()
 			:Generator()
 		{}

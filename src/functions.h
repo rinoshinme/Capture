@@ -7,7 +7,7 @@
 namespace Capture
 {
 	// find lowest n s.t. 2**n >= value
-	long Power2(long value)
+	inline long Power2(long value)
 	{
 		long p = 0;
 		long v = 1;

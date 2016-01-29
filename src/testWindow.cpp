@@ -1,12 +1,11 @@
-#if 1
+#if 0
 #include <GL\glut.h>
 #include <iostream>
-#include "src\source\window\RectangularWindow.h"
-#include "src\source\window\GaussianWindow.h"
-#include "src\source\window\HannWindow.h"
-#include "src\source\window\HammingWindow.h"
+#include "source\window\RectangularWindow.h"
+#include "source\window\GaussianWindow.h"
+#include "source\window\HannWindow.h"
+#include "source\window\HammingWindow.h"
 using namespace Capture;
-
 
 // range of position values
 double width = 800;

@@ -14,7 +14,14 @@
     <ClCompile Include="src\source\generator\SquareGenerator.cpp">
       <Filter>source\generator</Filter>
     </ClCompile>
-    <ClCompile Include="testWindow.cpp" />
+    <ClCompile Include="src\transform\fft4g.c">
+      <Filter>transform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testWindow.cpp" />
+    <ClCompile Include="src\testTransform.cpp" />
+    <ClCompile Include="src\transform\OouraFFT.cpp">
+      <Filter>transform</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\sound\simple_wav.h">
@@ -69,6 +76,12 @@
     <ClInclude Include="src\source\window\HammingWindow.h">
       <Filter>source\window</Filter>
     </ClInclude>
+    <ClInclude Include="src\transform\OouraFFT.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transform\transform_types.h">
+      <Filter>transform</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="sound">
@@ -88,6 +101,9 @@
     </Filter>
     <Filter Include="source\window">
       <UniqueIdentifier>{edabdf11-b5ea-46da-898d-0aa8e2e9d1dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="transform">
+      <UniqueIdentifier>{14cae3ab-52a8-4b18-b7ff-da3bc0ba16e9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
