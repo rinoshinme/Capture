@@ -14,6 +14,7 @@
     <ClCompile Include="src\source\generator\SquareGenerator.cpp">
       <Filter>source\generator</Filter>
     </ClCompile>
+    <ClCompile Include="testWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\sound\simple_wav.h">
@@ -53,6 +54,21 @@
     <ClInclude Include="src\source\generator\SquareGenerator.h">
       <Filter>source\generator</Filter>
     </ClInclude>
+    <ClInclude Include="src\source\window\window.h">
+      <Filter>source\window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\window\RectangularWindow.h">
+      <Filter>source\window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\window\GaussianWindow.h">
+      <Filter>source\window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\window\HannWindow.h">
+      <Filter>source\window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\window\HammingWindow.h">
+      <Filter>source\window</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="sound">
@@ -71,7 +87,7 @@
       <UniqueIdentifier>{4fc9fa74-1281-426c-96e1-d6ee2e541fa8}</UniqueIdentifier>
     </Filter>
     <Filter Include="source\window">
-      <UniqueIdentifier>{c38e94be-08ef-4dfa-be35-2c46c75b6829}</UniqueIdentifier>
+      <UniqueIdentifier>{edabdf11-b5ea-46da-898d-0aa8e2e9d1dd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
