@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="src\sound\simple_wav.cpp">
-      <Filter>sound</Filter>
-    </ClCompile>
-    <ClCompile Include="src\testDraw.cpp" />
     <ClCompile Include="src\source\generator\WhiteNoiseGenerator.cpp">
       <Filter>source\generator</Filter>
     </ClCompile>
@@ -17,26 +13,32 @@
     <ClCompile Include="src\transform\fft4g.c">
       <Filter>transform</Filter>
     </ClCompile>
-    <ClCompile Include="src\testWindow.cpp" />
-    <ClCompile Include="src\testTransform.cpp" />
     <ClCompile Include="src\transform\OouraFFT.cpp">
       <Filter>transform</Filter>
     </ClCompile>
+    <ClCompile Include="src\source\simple_wav.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\voila\SoundEffect.cpp">
+      <Filter>voila</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\testDraw.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\testTransform.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\testWindow.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\sound\simple_wav.h">
-      <Filter>sound</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sound\wav_header.h">
-      <Filter>sound</Filter>
-    </ClInclude>
     <ClInclude Include="src\filter\firfilter.h">
       <Filter>filter</Filter>
     </ClInclude>
     <ClInclude Include="src\filter\iirfilter.h">
       <Filter>filter</Filter>
     </ClInclude>
-    <ClInclude Include="src\functions.h" />
     <ClInclude Include="src\filter\auxiliary\allpass.h">
       <Filter>filter\auxiliary</Filter>
     </ClInclude>
@@ -82,11 +84,21 @@
     <ClInclude Include="src\transform\transform_types.h">
       <Filter>transform</Filter>
     </ClInclude>
+    <ClInclude Include="src\source\simple_wav.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\wav_header.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source.h" />
+    <ClInclude Include="src\voila\SoundEffect.h">
+      <Filter>voila</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\functions.h">
+      <Filter>source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="sound">
-      <UniqueIdentifier>{e350d121-61ae-43c1-b283-e61ab4e22877}</UniqueIdentifier>
-    </Filter>
     <Filter Include="filter">
       <UniqueIdentifier>{a2177cd3-c680-4b39-b06c-dcff278544ca}</UniqueIdentifier>
     </Filter>
@@ -104,6 +116,12 @@
     </Filter>
     <Filter Include="transform">
       <UniqueIdentifier>{14cae3ab-52a8-4b18-b7ff-da3bc0ba16e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="voila">
+      <UniqueIdentifier>{0274c142-a8f6-4cd7-a3d1-631df8b95cdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{49da5275-5c95-4cc1-b919-1b2bb19540a5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

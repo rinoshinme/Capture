@@ -3,6 +3,8 @@
 
 #include <stdlib.h>
 #include <limits.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 namespace Capture
 {
@@ -24,6 +26,12 @@ namespace Capture
 	{
 		return std::rand() / static_cast<double>(RAND_MAX);
 	}
+
+	inline double Saturation(double x)
+	{
+		return sinh(x);
+	}
+
 }
 
 #endif

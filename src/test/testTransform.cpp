@@ -1,4 +1,4 @@
-#if 1
+#if 0
 #include <GL\glut.h>
 #include "transform\OouraFFT.h"
 #include "functions.h"
@@ -23,7 +23,7 @@ void init()
 	input.resize(LEN);
 	for (int i = 0; i < LEN; ++i)
 	{
-		input[i] = RandomDouble();
+		input[i] = 2 * (RandomDouble() - 0.5);
 		//input[i] = sin(i * M_PI / 30);
 	}
 	OouraFFT fft(LEN);
@@ -43,7 +43,12 @@ void display()
 	glPointSize(2.0);
 	glBegin(GL_LINE_STRIP);
 	for (int i = 0; i < LEN; ++i)
-		glVertex2f(width/8 + width*3/4 * i / LEN, height / 2 +  1 * output[i].real());
+		glVertex2f(width/8 + width*3/4 * i / LEN, height * 3 / 4 +  1 * output[i].real());
+	glEnd();
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_LINE_STRIP);
+	for (int i = 0; i < LEN; ++i)
+		glVertex2f(width/8 + width*3/4 * i / LEN, height / 4 +  50 * input[i]);
 	glEnd();
 
 	glFlush();

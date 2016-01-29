@@ -1,10 +1,7 @@
-#if 0
+#if 1
 #include <GL\glut.h>
 #include <iostream>
-#include "source\window\RectangularWindow.h"
-#include "source\window\GaussianWindow.h"
-#include "source\window\HannWindow.h"
-#include "source\window\HammingWindow.h"
+#include "../source.h"
 using namespace Capture;
 
 // range of position values

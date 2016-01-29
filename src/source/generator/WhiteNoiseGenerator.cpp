@@ -1,5 +1,5 @@
 #include "WhiteNoiseGenerator.h"
-#include "../../functions.h"
+#include "../functions.h"
 
 namespace Capture
 {
