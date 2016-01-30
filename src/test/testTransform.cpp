@@ -14,7 +14,7 @@ using namespace Capture;
 double width = 800;
 double height = 600;
 
-const int LEN = 4096;
+const int LEN = 1024;
 
 std::vector<double> input;
 std::vector<Complex> output;
@@ -27,8 +27,9 @@ void init()
 		//input[i] = 2 * (RandomDouble() - 0.5);
 		input[i] = sin(i * M_PI / 20);
 	}
-	OouraFFT fft(LEN);
-	output = fft.FFT(input);
+	
+	std::auto_ptr<FFTBase> ptrFFT = GetFFT(LEN, OouraFFTType);
+	output = ptrFFT->FFT(input);
 
 #if 0
 	// save data into text file

@@ -1,19 +1,17 @@
 #ifndef _DFT_H
 #define _DFT_H
 
+#include "FFTBase.h"
 #include "TransformTypes.h"
 
 namespace Capture
 {
 	// calculate DFT using the formula as it is
-	class DFT
+	class DFT: public FFTBase
 	{
-	private:
-		int N;
-
 	public:
 		DFT(int length)
-			:N(length)
+			:FFTBase(length)
 		{}
 
 		~DFT()

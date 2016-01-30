@@ -1,6 +1,7 @@
 #ifndef _OOURA_FFT_H
 #define _OOURA_FFT_H
 
+#include "FFTBase.h"
 #include "TransformTypes.h"
 #include <math.h>
 
@@ -11,15 +12,14 @@ extern "C" {
 
 namespace Capture
 {
-	class OouraFFT
+	class OouraFFT: public FFTBase
 	{
 	private:
-		int N;
 		int* ip;
 		double* w;
 	public:
 		OouraFFT(int length)
-			:N(length)
+			:FFTBase(length)
 		{
 			ip = new int[static_cast<int>(2 + sqrt(static_cast<double>(N)))];
 			w = new double[N / 2];

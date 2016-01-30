@@ -80,8 +80,13 @@
     <ClCompile Include="src\test\testDraw.cpp" />
     <ClCompile Include="src\test\testTransform.cpp" />
     <ClCompile Include="src\test\testWindow.cpp" />
+    <ClCompile Include="src\transform\DCT.cpp" />
     <ClCompile Include="src\transform\DFT.cpp" />
     <ClCompile Include="src\transform\fft4g.c" />
+    <ClCompile Include="src\transform\FFTFactory.cpp" />
+    <ClCompile Include="src\transform\mfcc\MelFilter.cpp" />
+    <ClCompile Include="src\transform\mfcc\MelFilterBank.cpp" />
+    <ClCompile Include="src\transform\mfcc\MFCC.cpp" />
     <ClCompile Include="src\transform\OouraFFT.cpp" />
     <ClCompile Include="src\voila\SoundEffect.cpp" />
   </ItemGroup>
@@ -106,7 +111,13 @@
     <ClInclude Include="src\source\window\HannWindow.h" />
     <ClInclude Include="src\source\window\RectangularWindow.h" />
     <ClInclude Include="src\source\window\Window.h" />
+    <ClInclude Include="src\transform\DCT.h" />
     <ClInclude Include="src\transform\DFT.h" />
+    <ClInclude Include="src\transform\FFTBase.h" />
+    <ClInclude Include="src\transform\FFTFactory.h" />
+    <ClInclude Include="src\transform\mfcc\MelFilter.h" />
+    <ClInclude Include="src\transform\mfcc\MelFilterBank.h" />
+    <ClInclude Include="src\transform\mfcc\MFCC.h" />
     <ClInclude Include="src\transform\OouraFFT.h" />
     <ClInclude Include="src\transform\TransformTypes.h" />
     <ClInclude Include="src\voila\SoundEffect.h" />

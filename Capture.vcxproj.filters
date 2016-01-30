@@ -40,6 +40,21 @@
     <ClCompile Include="src\transform\DFT.cpp">
       <Filter>transform</Filter>
     </ClCompile>
+    <ClCompile Include="src\transform\FFTFactory.cpp">
+      <Filter>transform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\transform\mfcc\MelFilter.cpp">
+      <Filter>transform\mfcc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\transform\mfcc\MelFilterBank.cpp">
+      <Filter>transform\mfcc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\transform\DCT.cpp">
+      <Filter>transform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\transform\mfcc\MFCC.cpp">
+      <Filter>transform\mfcc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\source\generator\Generator.h">
@@ -110,6 +125,24 @@
     <ClInclude Include="src\transform\DFT.h">
       <Filter>transform</Filter>
     </ClInclude>
+    <ClInclude Include="src\transform\FFTBase.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transform\FFTFactory.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transform\mfcc\MelFilter.h">
+      <Filter>transform\mfcc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transform\mfcc\MelFilterBank.h">
+      <Filter>transform\mfcc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transform\DCT.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transform\mfcc\MFCC.h">
+      <Filter>transform\mfcc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="filter">
@@ -135,6 +168,9 @@
     </Filter>
     <Filter Include="test">
       <UniqueIdentifier>{49da5275-5c95-4cc1-b919-1b2bb19540a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="transform\mfcc">
+      <UniqueIdentifier>{be4c6f8f-03e8-41db-be1d-0e216f5e43df}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
