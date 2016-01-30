@@ -1,7 +1,7 @@
 #ifndef _OOURA_FFT_H
 #define _OOURA_FFT_H
 
-#include "transform_types.h"
+#include "TransformTypes.h"
 #include <math.h>
 
 extern "C" {

@@ -1,4 +1,4 @@
-#include "simple_wav.h"
+#include "SimpleWav.h"
 #include <fstream>
 #include <iostream>
 

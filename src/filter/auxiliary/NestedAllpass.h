@@ -1,8 +1,8 @@
 #ifndef _NESTED_ALL_PASS_H
 #define _NESTED_ALL_PASS_H
 
-#include "allpass.h"
-#include "delay.h"
+#include "Allpass.h"
+#include "Delay.h"
 
 namespace Capture
 {

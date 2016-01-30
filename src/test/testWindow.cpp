@@ -1,7 +1,7 @@
 #if 1
 #include <GL\glut.h>
 #include <iostream>
-#include "../source.h"
+#include "../IncludeAll.h"
 using namespace Capture;
 
 // range of position values

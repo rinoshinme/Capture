@@ -16,9 +16,6 @@
     <ClCompile Include="src\transform\OouraFFT.cpp">
       <Filter>transform</Filter>
     </ClCompile>
-    <ClCompile Include="src\source\simple_wav.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="src\voila\SoundEffect.cpp">
       <Filter>voila</Filter>
     </ClCompile>
@@ -31,26 +28,17 @@
     <ClCompile Include="src\test\testWindow.cpp">
       <Filter>test</Filter>
     </ClCompile>
+    <ClCompile Include="src\filter\FirFilter.cpp">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\source\SimpleWav.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filter\IirFilter.cpp">
+      <Filter>filter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\filter\firfilter.h">
-      <Filter>filter</Filter>
-    </ClInclude>
-    <ClInclude Include="src\filter\iirfilter.h">
-      <Filter>filter</Filter>
-    </ClInclude>
-    <ClInclude Include="src\filter\auxiliary\allpass.h">
-      <Filter>filter\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\filter\auxiliary\delay.h">
-      <Filter>filter\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\filter\auxiliary\gardner_reverb.h">
-      <Filter>filter\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\filter\auxiliary\nested_allpass.h">
-      <Filter>filter\auxiliary</Filter>
-    </ClInclude>
     <ClInclude Include="src\source\generator\Generator.h">
       <Filter>source\generator</Filter>
     </ClInclude>
@@ -62,9 +50,6 @@
     </ClInclude>
     <ClInclude Include="src\source\generator\SquareGenerator.h">
       <Filter>source\generator</Filter>
-    </ClInclude>
-    <ClInclude Include="src\source\window\window.h">
-      <Filter>source\window</Filter>
     </ClInclude>
     <ClInclude Include="src\source\window\RectangularWindow.h">
       <Filter>source\window</Filter>
@@ -81,21 +66,43 @@
     <ClInclude Include="src\transform\OouraFFT.h">
       <Filter>transform</Filter>
     </ClInclude>
-    <ClInclude Include="src\transform\transform_types.h">
-      <Filter>transform</Filter>
-    </ClInclude>
-    <ClInclude Include="src\source\simple_wav.h">
-      <Filter>source</Filter>
-    </ClInclude>
-    <ClInclude Include="src\source\wav_header.h">
-      <Filter>source</Filter>
-    </ClInclude>
     <ClInclude Include="src\source.h" />
     <ClInclude Include="src\voila\SoundEffect.h">
       <Filter>voila</Filter>
     </ClInclude>
-    <ClInclude Include="src\source\functions.h">
+    <ClInclude Include="src\filter\auxiliary\Allpass.h">
+      <Filter>filter\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter\auxiliary\Delay.h">
+      <Filter>filter\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter\auxiliary\GardnerReverb.h">
+      <Filter>filter\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter\auxiliary\NestedAllpass.h">
+      <Filter>filter\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter\FirFilter.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter\IirFilter.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\window\Window.h">
+      <Filter>source\window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\Functions.h">
       <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\SimpleWav.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="src\source\WavHeader.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IncludeAll.h" />
+    <ClInclude Include="src\transform\TransformTypes.h">
+      <Filter>transform</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

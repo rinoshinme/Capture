@@ -2,7 +2,7 @@
 #define _SIMPLE_WAV_H
 
 #include <string>
-#include "wav_header.h"
+#include "WavHeader.h"
 
 namespace Capture
 {

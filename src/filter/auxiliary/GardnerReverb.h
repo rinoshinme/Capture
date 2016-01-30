@@ -2,9 +2,9 @@
 #define _GARDNER_REVERB_H
 
 #include <math.h>
-#include "delay.h"
-#include "allpass.h"
-#include "nested_allpass.h"
+#include "Delay.h"
+#include "Allpass.h"
+#include "NestedAllpass.h"
 
 #define PI 3.1415926
 
