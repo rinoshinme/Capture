@@ -80,6 +80,7 @@
     <ClCompile Include="src\test\testDraw.cpp" />
     <ClCompile Include="src\test\testTransform.cpp" />
     <ClCompile Include="src\test\testWindow.cpp" />
+    <ClCompile Include="src\transform\DFT.cpp" />
     <ClCompile Include="src\transform\fft4g.c" />
     <ClCompile Include="src\transform\OouraFFT.cpp" />
     <ClCompile Include="src\voila\SoundEffect.cpp" />
@@ -105,6 +106,7 @@
     <ClInclude Include="src\source\window\HannWindow.h" />
     <ClInclude Include="src\source\window\RectangularWindow.h" />
     <ClInclude Include="src\source\window\Window.h" />
+    <ClInclude Include="src\transform\DFT.h" />
     <ClInclude Include="src\transform\OouraFFT.h" />
     <ClInclude Include="src\transform\TransformTypes.h" />
     <ClInclude Include="src\voila\SoundEffect.h" />

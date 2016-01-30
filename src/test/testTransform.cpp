@@ -1,11 +1,12 @@
-#if 0
+#if 1
 #include <GL\glut.h>
-#include "transform\OouraFFT.h"
-#include "functions.h"
 #include <vector>
 #include <complex>
 #define _USE_MATH_DEFINES
 #include <math.h>
+#include <stdio.h>
+
+#include "../IncludeAll.h"
 
 using namespace Capture;
 
@@ -23,11 +24,20 @@ void init()
 	input.resize(LEN);
 	for (int i = 0; i < LEN; ++i)
 	{
-		input[i] = 2 * (RandomDouble() - 0.5);
-		//input[i] = sin(i * M_PI / 30);
+		//input[i] = 2 * (RandomDouble() - 0.5);
+		input[i] = sin(i * M_PI / 20);
 	}
 	OouraFFT fft(LEN);
 	output = fft.FFT(input);
+
+#if 0
+	// save data into text file
+	FILE* fp = fopen("data.txt", "w");
+	for (int i = 0; i < LEN; ++i)
+		fprintf(fp, "%g\t%g\n", input[i], output[i].imag());
+	fclose(fp);
+
+#endif
 
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glMatrixMode(GL_PROJECTION);
@@ -43,7 +53,7 @@ void display()
 	glPointSize(2.0);
 	glBegin(GL_LINE_STRIP);
 	for (int i = 0; i < LEN; ++i)
-		glVertex2f(width/8 + width*3/4 * i / LEN, height * 3 / 4 +  1 * output[i].real());
+		glVertex2f(width/8 + width*3/4 * i / LEN, height * 3 / 4 +  0.1 * output[i].imag());
 	glEnd();
 	glColor3f(1.0, 0.0, 0.0);
 	glBegin(GL_LINE_STRIP);

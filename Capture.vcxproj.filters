@@ -37,6 +37,9 @@
     <ClCompile Include="src\filter\IirFilter.cpp">
       <Filter>filter</Filter>
     </ClCompile>
+    <ClCompile Include="src\transform\DFT.cpp">
+      <Filter>transform</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\source\generator\Generator.h">
@@ -102,6 +105,9 @@
     </ClInclude>
     <ClInclude Include="src\IncludeAll.h" />
     <ClInclude Include="src\transform\TransformTypes.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transform\DFT.h">
       <Filter>transform</Filter>
     </ClInclude>
   </ItemGroup>

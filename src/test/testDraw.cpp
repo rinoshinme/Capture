@@ -4,7 +4,7 @@
  */
 #include <GL\glut.h>
 #include <string>
-#include "sound\simple_wav.h"
+#include "../IncludeAll.h"
 
 using namespace Capture;
 

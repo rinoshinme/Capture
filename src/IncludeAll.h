@@ -16,6 +16,7 @@
 
 // transform
 #include "transform\OouraFFT.h"
+#include "transform\DFT.h"
 #include "transform\TransformTypes.h"
 
 // voila
