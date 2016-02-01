@@ -55,6 +55,9 @@
     <ClCompile Include="src\transform\mfcc\MFCC.cpp">
       <Filter>transform\mfcc</Filter>
     </ClCompile>
+    <ClCompile Include="src\test\testMFCC.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\source\generator\Generator.h">
@@ -171,6 +174,9 @@
     </Filter>
     <Filter Include="transform\mfcc">
       <UniqueIdentifier>{be4c6f8f-03e8-41db-be1d-0e216f5e43df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="synthesis">
+      <UniqueIdentifier>{a99d4426-e30d-4f99-8679-d3bc8a324016}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -78,6 +78,7 @@
     <ClCompile Include="src\source\generator\WhiteNoiseGenerator.cpp" />
     <ClCompile Include="src\source\SimpleWav.cpp" />
     <ClCompile Include="src\test\testDraw.cpp" />
+    <ClCompile Include="src\test\testMFCC.cpp" />
     <ClCompile Include="src\test\testTransform.cpp" />
     <ClCompile Include="src\test\testWindow.cpp" />
     <ClCompile Include="src\transform\DCT.cpp" />
